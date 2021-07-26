@@ -161,6 +161,16 @@ SELECT * FROM sysmail_mailitems
 SELECT * FROM sysmail_log
 ```
 
+## SENDING EMAIL STORED PROCEDURE
+
+```
+EXEC msdb.dbo.sp_send_dbmail
+     @profile_name = 'Notifications',
+     @recipients = 'Use a valid e-mail address',
+     @body = 'The database mail configuration was completed successfully.',
+     @subject = 'Automated Success Message';
+GO
+```
 # ALERT: SEVERITY LEVELS
 
 - What are alerts?
